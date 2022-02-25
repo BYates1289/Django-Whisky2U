@@ -1,0 +1,51 @@
+{% extends 'new_template/base.html' %}
+{% block newMain %}
+{% load static %}
+
+    <div id="account-info" class="container d-flex justify-content-center my-3">
+        <div class="my-auto">
+            <form class="py-2 mx-auto" action="" method="POST">
+                {% csrf_token %}
+                <div>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <h3 class="text-center fw-bold my-2" style="color: #ff5730">
+                        {{message}}.
+                    </h3>
+                    {% endfor %}
+                    {% endif %}
+                    <h1 class=" fw-bold my-3 text-center">
+                        Your Account Information
+                    </h1>
+                    <p class="text-center my-2">Please Ensure Your Account Details Are Correct</p>
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="row my-1">
+                            {% for form in form %}
+                            <div class="col-md-12">
+                                <h5 class="fw-bold text-center">{{form.label}}</h5>
+                                <div class="d-flex justify-content-center">
+                                    {{form}}
+                                </div>
+                                <p class="fw-bold text-center" style="color:red;">{{form.errors|striptags}}</p>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                        {% if product and quantity %}
+                        <input type="hidden" name="product" value="{{product}}"> <br>
+                        <input type="hidden" name="quantity" value="{{quantity}}"> <br>
+                        {% endif %}
+
+                        <a href="#" class="text-center my-3 col-12"><button type="submit"
+                                class="btn-2 text-center fw-bold ">Save <i class="ms-2 fas fa-save"></i></button></a>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    {% endblock newMain %}
