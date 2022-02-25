@@ -18,6 +18,7 @@ class Address(models.Model):
     address_1 = models.CharField(max_length=100)
     address_2 = models.CharField(max_length=100, blank=True, null=True)
     city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
     contact = models.CharField(max_length=100)
 
     def __str__(self):
