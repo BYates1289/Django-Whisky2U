@@ -1,0 +1,183 @@
+{% extends 'new_template/base.html' %}
+{% load static %}
+{% block newMain %}
+
+<section id="home" class="bg-black p-5">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="home-carousel owl-carousel">
+                <div><img src="{% static 'new_static/images/image-01.png' %}" alt="Whisky Graphic" style="width: 500px; height: auto" class="img-fluid home-img"></div>
+                <div><img src="{% static 'new_static/images/image-03.png' %}" alt="Whisky Graphic" style="width: 500px; height: auto" class="img-fluid home-img"></div>
+                
+            </div>
+        </div>
+        <div class="col-12 col-md-6 my-auto " >
+            <h1 class="d-flex justify-content-center text-white text-center my-3">
+                <b>The Whisky Club For The Curious.</b>
+            </h1>
+            <div class= "my-3 text-center">
+                <div class="row {% if user.is_authenticated %} d-flex justify-content-center {% endif %}">
+                    {% if not user.is_authenticated %}
+                        <div class="col-12 col-md-6 my-2">
+                            <a href="{% url 'register' %}"><button class="btn-1 fw-bold w-100">JOIN CLUB</button></a>
+                        </div>
+                    {% endif %}
+                    <div class="col-12 col-md-6 my-2">
+                        <a href="{% url 'pages:shop' %}"><button class="btn-1 fw-bold w-100">SHOP</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white fw-bold">
+                Rare & Exclusive Whiskies Delivered To Your Door.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="marquee">
+    <marquee>
+        <div class="marquee-inner d-flex py-2">
+            <span class="ms-2">
+                <h4><b>Free Next Day Delivery On All Orders!</b></h4>
+            </span>
+        </div>
+    </marquee>
+</section>
+
+<section class="my-5">
+    <div class="container-fluid">
+        <div class="text-center my-3">
+            <h1><b>How Does It Work?</b></h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 py-3 card-1">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img class="home-graphic" src="{% static 'new_static/images/image-04.png' %}" alt="Whisky Graphic" class="img-fluid">
+                    </div>
+                    <div class="col-12">
+                        <h2 class="text-center mt-5"><b><ins class="text-orange"><span class="text-black">Regular Deliveries.</span></ins></b></h2>
+                        <p class="text-center">Join the whisky club for the curious. Get a monthly dram of incredible whisky - curated from the planet's best distilleries - delivered to your door. Sample some of the world's most exclusive whiskies on a regular basis and become a whisky connoisseur! Looking for inspiration or struggling to find one you want? Check out our review section, where fellow members have posted about their favourite drams. Here's to a long and prosperous relationship.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 py-3 card-1">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img class="home-graphic" src="{% static 'new_static/images/image-12.png' %}" alt="Whisky Graphic" class="img-fluid">
+                    </div>
+                    <div class="col-12">
+                        <h2 class="text-center mt-5"><b><ins class="text-orange"><span class="text-black">We're Here To Change The World.</span></ins></b></h2>
+                        <p class="text-center">Our mission is as simple as that. We're here to get amazing whisky up to the lips of first-time triers, long-time sippers and curious drinkers everywhere. No matter whether you're a whisky newbie, curious to find your acquired taste, or a whisky veteran trying out a brand new tipple, you can be assured we're on hand to offer our advice and answer any questions you may have.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 py-3 card-3">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img class="home-graphic" src="{% static 'new_static/images/image-11.png' %}" alt="Whisky Graphic" class="img-fluid">
+                    </div>
+                    <div class="col-12">
+                        <h2 class="text-center mt-5"><b><ins class="text-orange"><span class="text-black">Let's Talk Whisky</span></ins></b></h2>
+                        <p class="text-center">Rate your recent drams, join our monthly online tastings and discover new drops with a snobbery-free community of fellow adventurers in the new world of whisky - then buy your favourites from our online cellar. We want to be more than just an online retailer. We want to be community of avid whisky enthusiasts and we would be thrilled to have you on board!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-5">
+    <div class="container-fluid bg-orange">
+        <div class="owl-carousel carousel-1">
+            <div class="item">
+                <div class="home-cards p-4">
+                    <div class="d-flex">
+                        <h1 class="me-5"><i class="text-white fas fa-wine-bottle"></i> </h1>
+                        <h4><b>Cancel Anytime</b></h4>
+                    </div>
+                    <div>
+                        <p>Stay for a short time or a long time, but we promise you will always have a good time!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="home-cards p-4">
+                    <div class="d-flex">
+                        <h1 class="me-5"><i class="text-white fas fa-medal"></i> </h1>
+                        <h4><b>Member Rewards</b></h4>
+                    </div>
+                    <div>
+                        <p>As a thank you, your 5th and 10th order will come at 15% off, including free delivery!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="home-cards p-4">
+                    <div class="d-flex">
+                        <h1 class="me-5"><i class="text-white fas fa-pound-sign"></i></h1>
+                        <h4><b>The Best Value for Money</b></h4>
+                    </div>
+                    <div>
+                        <p>Price promise. We will not be beaten on prices online!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="home-cards p-4">
+                    <div class="d-flex">
+                        <h1 class="me-5"> <i class="text-white fas fa-recycle"></i> </h1>
+                        <h4><b>Recycling Programme</b></h4>
+                    </div>
+                    <div>
+                        <p>Love whisky, hate waste! Send us your empties for discounts off your next order!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <div class="container-fluid text-center">
+        <h1 class="my-5"><b>Discover Great Whiskies.</b></h1>
+    <div class="row">
+        <div class="col-md-4 my-2">
+            <div class="border-radius bg-yellow p-3">
+                <div class="row d-flex justify-content-center">
+                    <h2 class="text-center fw-bold">Our February Pick</h2>
+                    <img src="{% static 'new_static/images/heavens-door.png' %}" alt="Heaven's Door Double Barrel Whisky" class="our-picks">
+                </div>
+                <div class="text-center ">
+                    <h5 class="my-2 home-products"><b><a href="#">Heaven's Door<br>Double Barrel</b></a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="border-radius bg-yellow p-3">
+                <div class="row d-flex justify-content-center">
+                    <h2 class="text-center fw-bold">Most Popular</h2>
+                    <img src="{% static 'new_static/images/jameson.png' %}" alt="Jameson Irish Whisky" class="our-picks">
+                </div>
+                <div class="text-center ">
+                    <h5 class="my-2 home-products"><b><a href="https://whisky-project-ms4.herokuapp.com/single_product/4">Jameson<br>Irish Whisky</b></a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="border-radius bg-yellow p-3">
+                <div class="row d-flex justify-content-center">
+                    <h2 class="text-center fw-bold">Latest Arrival</h2>
+                    <img src="{% static 'new_static/images/suntory.png' %}" alt="Suntory Whisky Toki" class="our-picks">
+                </div>
+                <div class="text-center ">
+                    <h5 class="my-2 home-products"><b><a href="#">Suntory<br>Whisky Toki</b></a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock newMain %}
