@@ -60,6 +60,7 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+stripe_key.py
 
 # Flask stuff:
 instance/
