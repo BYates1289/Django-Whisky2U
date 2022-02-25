@@ -1,0 +1,1 @@
+web: gunicorn whiskey_me.wsgi
