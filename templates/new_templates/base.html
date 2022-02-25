@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Whisky Django Project">
+    <meta name="theme-color" content="#ff5730"/>
+    <meta name="author" content="Ben Yates" />
+    <title>Whisky Me</title>
+    <link rel="shortcut icon" href="/static/new_static/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/static/new_static/images/apple-touch-icon.png">    
+    <link href="{% static 'new_static/css/bootstrap.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="{% static 'new_static/css/owl.carousel.css' %}" rel="stylesheet" />
+    <link href="{% static 'new_static/css/owl.theme.default.css' %}" rel="stylesheet" />
+    <link href="{% static 'new_static/css/styles.css' %} " rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% include 'new_template/header.html' %}
+
+    {% block newMain %}{% endblock newMain %}
+
+    {% include 'new_template/footer.html' %}
+
+    <script src="{% static 'new_static/js/bootstrap.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'new_static/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'new_static/js/master.js' %}"></script>
+</body>
+
+</html>
