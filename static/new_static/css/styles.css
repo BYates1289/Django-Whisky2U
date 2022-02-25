@@ -1,0 +1,739 @@
+body {
+    margin: 0;
+    position: relative;
+    font-size: 18px;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    box-sizing: border-box;
+    overflow-x: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 1200 !important;
+    color: #000
+}
+
+p {
+    font-weight: 600
+}
+
+#mainnavigation a.nav-link {
+    color: #fff !important
+}
+
+#mainnavigation a.nav-link:hover {
+    color: #ff5730 !important
+}
+
+.btn-login {
+    width: 300px;
+    background-color: #ff5730;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #ff5730;
+    height: 40px
+}
+
+.dropdown-item.active,
+.dropdown-item.active:hover {
+    background-color: #ff5730 !important;
+    color: #000
+}
+
+.dropdown a:focus,
+.dropdown a:hover {
+    color: #fff;
+    background-color: inherit !important
+}
+
+.btn-login:hover {
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #000;
+    height: 40px
+}
+
+.btn-2 {
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #fff
+}
+
+.btn-2:hover {
+    width: 120px;
+    background-color: #ff5730;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #ff5730
+}
+
+.btn-4 {
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #fff
+}
+
+.btn-4:hover {
+    width: 120px;
+    background-color: #ff5730;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #ff5730
+}
+
+.qty-input {
+    color: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 40px !important;
+    border: 2px solid #000;
+    border-radius: 25px;
+    justify-content: center;
+    width: 90px
+}
+
+.about-graphics {
+    max-height: 500px;
+}
+
+.qty-input .product-qty,
+.qty-input .qty-count {
+    background: 0 0;
+    color: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    border: none;
+    display: inline-block;
+    min-width: 0;
+    height: 2.5rem;
+    line-height: 1
+}
+
+.qty-input .product-qty:focus,
+.qty-input .qty-count:focus {
+    outline: 0
+}
+
+.qty-input .product-qty {
+    width: 50px;
+    min-width: 0;
+    display: inline-block;
+    text-align: center;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield
+}
+
+.qty-input .product-qty::-webkit-inner-spin-button,
+.qty-input .product-qty::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0
+}
+
+.qty-input .qty-count {
+    padding: 0;
+    cursor: pointer;
+    width: 2.5rem;
+    font-size: 1.25em;
+    text-indent: -100px;
+    overflow: hidden;
+    position: relative
+}
+
+.qty-input .qty-count:after,
+.qty-input .qty-count:before {
+    content: "";
+    height: 2px;
+    width: 10px;
+    position: absolute;
+    display: block;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.qty-input .qty-count--add:after {
+    transform: rotate(90deg)
+}
+
+.qty-input .qty-count:disabled {
+    color: #ccc;
+    background: #f2f2f2;
+    cursor: not-allowed;
+    border-color: transparent
+}
+
+.qty-input .qty-count:disabled:after,
+.qty-input .qty-count:disabled:before {
+    background: #ccc
+}
+
+.product-review-box {
+    border: 1px solid gray
+}
+
+.product-review {
+    border-bottom: 1px solid gray !important
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px
+}
+
+.rate:not(:checked)>input {
+    display: none
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ '
+}
+
+.rate>input:checked~label {
+    color: #ffc700
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08
+}
+
+.bg-black {
+    background: #000 !important;
+    z-index: -1
+}
+
+.bg-orange {
+    background: #ff5730 !important
+}
+
+.bg-yellow {
+    background: #f9dc5a !important
+}
+
+.bg-sky {
+    background: #b1dde4 !important
+}
+
+#marquee {
+    background: #ff5730;
+    color: #fff;
+    height: 40px
+}
+
+.our-picks {
+    height: 230px !important;
+    min-width: 250px !important;
+    max-width: 250px !important
+}
+
+.home-products a {
+    color: inherit;
+    text-decoration: none
+}
+
+.home-products a:hover {
+    color: #ff5730;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.border-radius {
+    border-radius: 30px
+}
+
+.btn-1 {
+    width: 120px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    border: 2px solid #fff
+}
+
+.btn-1:hover {
+    width: 120px;
+    background-color: #ff5730;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #ff5730
+}
+
+.socials {
+    font-size: 2rem
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #000 !important
+}
+
+.dropdown-item {
+    color: #fff !important
+}
+
+.accordian-header-box,
+.accordian-header-last {
+    background: #fff;
+    border: 0;
+    border-top: 2px solid #000;
+    width: 200px;
+    align-items: center;
+    margin-top: -7px
+}
+
+.accordian-header-last {
+    border-bottom: 2px solid #000
+}
+
+.filter-button-inside {
+    width: 200px;
+    height: 30px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 25px;
+    font-weight: 700
+}
+
+.filter-button-inside:hover {
+    background: #ff5730;
+    color: #fff;
+    border: 2px solid #ff5730
+}
+
+.filter-button {
+    width: 200px;
+    height: 40px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 25px;
+    font-weight: 700
+}
+
+.filter-button:hover {
+    background: #ff5730;
+    border: 2px solid #ff5730
+}
+
+.clear-filter a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.25rem
+}
+
+.flavor-button-1,
+.flavor-button-2 {
+    width: 200px;
+    height: 30px;
+    color: #000;
+    border-radius: 25px
+}
+
+.flavor-button-1 {
+    background: #a8daf9;
+}
+
+.flavor-button-2 {
+    background: #c3bfe9;
+}
+
+.flavor-button-1,
+.flavor-button-2:hover {
+    color: #fff;
+}
+
+form input {
+    padding: 0 15px !important
+}
+
+form input {
+    padding: 0 15px !important
+}
+
+.form-input {
+    border-radius: 25px;
+    border: 2px solid #000;
+    width: 300px;
+    height: 40px !important
+}
+
+#signin-form .form-input {
+    border-radius: 25px;
+    border: 2px solid #000;
+    width: 300px;
+    height: 40px
+}
+
+#signin-form .email-input {
+    border-radius: 25px;
+    border: 2px solid #000;
+    width: 300px;
+    height: 40px
+}
+
+#account-info .form-input {
+    border-radius: 20px;
+    border: 2px solid #000;
+    width: 300px;
+    height: 30px !important
+}
+
+#account-info .qty-input {
+    border: none
+}
+
+#shop-product .product-wrapper {
+    margin: 4px;
+    border: 2px dotted gray;
+    padding: 10px !important;
+    height: auto;
+    width: auto !important;
+    border-radius: 20px
+}
+
+#shop-product .product-wrapper:hover {
+    border: none;
+    background: #ff5730;
+    background: linear-gradient(45deg, rgba(255, 87, 48, 1) 0, rgba(48, 255, 211, 1) 59%);
+    transition: .5s
+}
+
+#shop-product .img-product-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: auto
+}
+
+#shop-product .btn-5 {
+    width: 170px;
+    height: 40px;
+    background-color: #f9dc5a;
+    color: #000;
+    border-radius: 25px;
+    border: 2px solid #000
+}
+
+#shop-product .btn-5:hover,
+active {
+    background-color: #ff5730;
+    color: #fff;
+    border: none;
+    border: 2px solid #ff5730
+}
+
+#shop-product .btn-3 {
+    font-size: 12px;
+    width: 130px !important;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #000
+}
+
+#shop-product .btn-3:hover,
+active {
+    background-color: #ff5730;
+    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #ff5730
+}
+
+.desktop-faq ul li {
+    list-style: none
+}
+
+.desktop-faq ul li a {
+    text-decoration: none;
+    color: #fff !important;
+    border-bottom: 4px solid #000 !important
+}
+
+.desktop-faq ul li a:hover {
+    border-bottom: 4px solid #ff5730 !important;
+    transition: .5s;
+    cursor: pointer
+}
+
+.desktop-faq ul li a.active {
+    border-bottom: 4px solid #ff5730 !important;
+    transition: .5s
+}
+
+.footer-list li {
+    list-style: none
+}
+
+@media (min-device-width:767px) {
+    #faq-contact-us {
+        height: calc(100vh - 50px);
+        padding: 54px;
+        margin-bottom: 30px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        border-radius: 20px
+    }
+
+    #faq-for-sm {
+        display: none !important
+    }
+
+    .desktop-faq {
+        display: block !important
+    }
+    .logo {
+        max-width: 400px !important;
+    }
+}
+
+@media (min-device-width:280px) and (max-device-width:766px) {
+    .desktop-faq {
+        display: none !important
+    }
+
+    #faq-for-sm {
+        outline: block !important
+    }
+
+    #faq-for-sm ul li {
+        list-style: none
+    }
+
+    #faq-for-sm ul li a {
+        list-style: none;
+        text-decoration: none;
+        color: #ff5730 !important
+    }
+
+    .join-shop-btn {
+        width: 130px !important
+    }
+}
+
+.min-h-100 {
+    min-height: 100vh
+}
+@media (max-device-width:350px) {
+    .logo {
+        width: 180px !important
+    }
+}
+@media (min-width: 402px) and (max-width: 766px) {
+    .logo {
+        width: 300px;
+    }
+}
+
+@media (max-device-width:401px) {
+    .logo {
+        width: 210px !important
+    }
+
+    .socials,
+    footer h1 {
+        font-size: 1rem
+    }
+
+    #account-info .form-input {
+        width: auto !important
+    }
+
+    .btn-4,
+    .dropdown-menu,
+    .navbar-nav .nav-link {
+        font-size: .9rem
+    }
+
+    .btn-4 {
+        width: auto
+    }
+
+    .footer-container {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important
+    }
+
+    small {
+        font-size: .7rem
+    }
+}
+
+#about-home {
+    background-image: url(https://whisky-project-ms4.herokuapp.com/static/new_static/images/bg5.jpg);
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.text-orange {
+    color: #ff5730 !important
+}
+
+.home-graphic {
+    max-width: 400px;
+    width: 100%;
+}
+
+.bg-violet {
+    background: #f6dbe6 !important
+}
+
+#founder-history {
+    position: relative
+}
+
+.community-count-2 {
+    border: 4px dashed #000;
+    border-top: 0;
+    border-bottom: 0
+}
+@media (max-width: 310px) {
+    .logo {
+        width: 160px !important;
+    }
+}
+@media (min-device-width:319px) and (max-device-width:593px) {
+    .form-input {
+        width: 300px !important;
+        height: 40px !important
+    }
+
+    form .col-md-6 {
+        padding: 0 !important
+    }
+
+    .accordian-header-box,
+    .accordian-header-last {
+        background: #fff;
+        border: 0;
+        border-top: 2px solid #000;
+        width: 200px;
+        align-items: center;
+        margin-top: 0
+    }
+}
+
+@media (min-device-width:319px) and (max-device-width:768px) {
+
+    .p1,
+    .p2,
+    .p3,
+    .p4,
+    .p5,
+    .p6,
+    .p7,
+    .p8 {
+        display: none
+    }
+
+    .community-count-2 {
+        display: none
+    }
+}
+
+.p1 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 24%
+}
+
+.p2 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 4%;
+    left: 55%
+}
+
+.p3 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 36%;
+    right: -7%;
+    border-radius: 20px
+}
+
+.p4 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 82%;
+    right: 6%
+}
+
+.p5 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 72%;
+    left: 38%
+}
+
+.p6 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 64%;
+    left: 14%
+}
+
+.p7 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 57%;
+    left: -17%
+}
+
+.p8 img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 15%;
+    left: -4%;
+    border-radius: 82px !important
+}
