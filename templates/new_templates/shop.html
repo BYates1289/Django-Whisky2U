@@ -1,0 +1,188 @@
+
+{% extends 'new_template/base.html' %}
+{% load static %}
+
+{% block newMain %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 bg-black">
+            <img src="{% static 'new_static/images/shop.jpg' %}" alt="Bar Image" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 bg-black fw-bold text-white d-flex justify-content-center align-items-center">
+            <div class="fw-bold text-white text-center">
+                <h1 class="text-white fw-bold">The Cellar</h1>
+                <p>All of our past and present whiskies available to purchase in one place. Refine the collection by flavour, region or distillery to hone in on your perfect dram.</p>
+            </div>
+        </div>
+        <div class="bg-orange text-black fw-bold py-2 mb-3"></div>     
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-between">
+        <div class="col-md-12">
+            <div id="filter">
+                <div class="border-0">
+                    <h2 class="accordion-header" id="filter-dropdown">
+                        <button class="filter-button mb-3 " type="button" data-bs-toggle="collapse" data-bs-target="#filter-body" aria-expanded="false" aria-controls="filter-body">
+                            <h5 class="my-auto fw-bold">Filter<span><i class="ms-3 fas fa-arrow-down"></i></span></h5>
+                        </button>
+                        <a href="{% url 'pages:shop' %}"><button class="filter-button mb-3 " type="button">
+                            <h5 class="my-auto fw-bold">Clear Filter<span><i class="ms-3 fa fa-times"></i></span></h5>
+                        </button></a>
+                        
+                        
+                    </h2>
+                    <div id="filter-body" class="accordion-collapse 
+                        collapse" aria-labelledby="filter-dropdown" data-bs-parent="#filter">
+                        <div id="price">
+                            <div class="accordian-header-box border-0">
+                                <h2 class="accordion-header" id="price-dropdown">
+                                    <button class="accordian-header-box" type="button" data-bs-toggle="collapse" data-bs-target="#price-body" aria-expanded="false" aria-controls="price-body">
+                                        <h5 class="my-auto fw-bold">Price</h5>
+                                    </button>
+                                </h2>
+                                <div id="price-body" class="accordion-collapse 
+                                    collapse" aria-labelledby="price-dropdown" data-bs-parent="#price">
+                                    <div class="accordion-body p-0 ">
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:price_range' "0" "100" %}">Under £100 </a>
+                                        </button><br />
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:price_range' "100" "250" %}">£100 - £250 </a>
+                                        </button><br />
+                                        <button class="filter-button-inside my-1 ">
+                                           <a href="{% url 'pages:price_range' "250" "500" %}"> £250 - £500 </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div id="AGE">
+                            <div class="accordian-header-box border-0">
+                                <h2 class="accordion-header" id="AGE-dropdown">
+                                    <button class="accordian-header-box" type="button" data-bs-toggle="collapse" data-bs-target="#AGE-body" aria-expanded="false" aria-controls="AGE-body">
+                                        <h5 class="my-auto fw-bold">Age</h5>
+                                    </button>
+                                </h2>
+                                <div id="AGE-body" class="accordion-collapse 
+                                    collapse" aria-labelledby="AGE-dropdown" data-bs-parent="#AGE">
+                                    <div class="accordion-body p-0 ">
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:age_range' "0" "10" %}">Under 10 years </a>
+                                        </button><br />
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:age_range' "10" "25" %}">10 - 25 years </a>
+
+                                            
+                                        </button><br />
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:age_range' "25" "50" %}">25 - 50 years </a>
+
+                                            
+                                        </button><br />
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:age_range' "50" "75" %}">50 - 75 years </a>
+
+                                            
+                                        </button><br />
+                                        <button class="filter-button-inside my-1 ">
+                                            <a href="{% url 'pages:age_range' "75" "200" %}">75 - 200 years </a>
+                                            
+                                        </button><br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="FLAVOUR" class="mb-2">
+                            <div class="accordian-header-box border-0">
+                                <h2 class="accordion-header" id="FLAVOUR-dropdown">
+                                    <button class="accordian-header-last" type="button" data-bs-toggle="collapse" data-bs-target="#FLAVOUR-body" aria-expanded="false" aria-controls="FLAVOUR-body">
+                                        <h5 class="my-auto fw-bold">Bottle Size</h5>
+                                    </button>
+                                </h2>
+                                <div id="FLAVOUR-body" class="accordion-collapse 
+                                    collapse" aria-labelledby="FLAVOUR-dropdown" data-bs-parent="#FLAVOUR">
+                                    <div class="accordion-body p-0 ">
+                                        <a href="{% url 'pages:size_range' "5cl" %}"> <button class="flavor-button-1 border-0 my-1 ">5cl</button></a>
+                                    </div>
+                                    <div class="accordion-body p-0 ">
+                                        <a href="{% url 'pages:size_range' "70cl" %}"> <button class="flavor-button-2 border-0 my-1 ">70cl</button></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="shop-product" class="container mb-3">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="bg-yellow shop-card border-radius p-2 mb-3">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h3 class="text-black fw-bold mb-3 p-3">Thirsty For More?</h3>
+                            <p class="fw-bold ms-1">Just check out our prices below! We're that confident that we are the cheapest around that not only will be price match any price online, but we'll also knock an extra 10% off. How good is that!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1">
+                        <img src="{% static 'new_static/images/image-09.png' %} " alt="Whisky Graphic" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="bg-black shop-card border-radius p-3 ">
+                <div class="row">
+                    <div class="col-12 col-md-6 ">
+                        <div>
+                            <h3 class="text-white fw-bold mb-3 p-3">Like What You See?</h3>
+                            <p class="fw-bold text-white">Browse our selection of the world's most sought after whiskies. We source them, you enjoy them!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1">
+                        <img src="{% static 'new_static/images/image-05.png' %} " alt="Whisky Graphic" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        {% for product in product %}
+            <div class="col-12  col-md-6 col-lg-3">
+                <div class="product-wrapper p-2">
+                    <div class="d-flex justify-content-center">
+                        <div class="img-product-wrapper my-3">
+                            <img src="{{product.picture.url}}" alt="Product Image" class="img-product-wrapper">
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-black fw-bold text-center" style="font-size:15px">{{product.product_name|truncatewords:3}}</h5>
+                        <p class="my-2">
+                            {{product.category}}
+                        </p>
+                        <h5 class="fw-bold text-black">
+                            £{{product.price}}
+                        </h5>
+                        <div class="d-flex justify-content-end">
+                            <a href="{% url 'product:single_product' product.pk %}"><button class="btn-3 fw-bold">View Details</button></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+   
+</div>
+
+
+{% endblock newMain %}
