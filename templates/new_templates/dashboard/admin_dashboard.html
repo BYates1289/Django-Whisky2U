@@ -1,0 +1,105 @@
+{% extends 'new_template/base.html' %}
+{% block newMain %}
+
+    {% if class_active == "single" %}
+
+        <div class="container" style="overflow-x:auto; font-size:80%">
+            <div class="row ">
+                <br>
+                <h1 class=" fw-bold text-dark my-3 text-center">
+                    Single Item Report Admin 
+                </h1>
+                        
+                <table class="table ps-table ps-table--vendor">
+                    <thead>
+                        <tr>
+                            <th>Created</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    {% for r in single %}
+
+                        <tbody>
+
+                            <tr>
+                                <td>{{r.current_period_start}}</td>
+                                <td>{{r.product.product_name}}</td>
+                                <td>£{{r.amount}}</td>
+                                <td>{{r.quantity}}</td>
+                                <td>£{{r.total}}</td>
+                                <td style="color:green"> {{r.status}} </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    {% endfor %}
+
+
+                </table>
+            </div>
+        </div>
+
+    {% else %}
+
+        <div class="container" style="overflow-x:auto; font-size:80%">
+            <div class="row">
+                <br>
+                <h1 class="fw-bold text-dark my-3 text-center">
+                    Subscription Report For Admin 
+                </h1>
+                    
+                <table class="table ps-table ps-table--vendor">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Date</th>
+                            <th>Interval</th>
+                            <th>Product</th>
+                            <th>Price x Quantity</th>
+                            <th>Total</th>
+                            <th>Next Invoice</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    
+                    {% for r in subscription %}
+                        <tbody>
+                                <tr>
+                                    <td>{{r.user}}</td>
+                                    <td>{{r.current_period_start}}</td>
+                                    <td>{{r.interval}}</td>
+                                    <td>{{r.product}}</td>
+                                    <td>£{{r.amount}} x {{r.quantity}}</td>
+                                    <td>£{{r.total}}</td>
+                                    <td>{{r.current_period_end}}</td>
+                                    
+                                    {% if r.status == "active" %}
+                                        <td style="color:green">{{r.status|upper}}</td>
+                                    {% else %}
+                                        <td style="color:red">{{r.status|upper}}</td>
+                                    {% endif %}
+                                </tr>
+                        </tbody>
+
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+    {% endif %}
+
+
+    <script>
+        function checkdel(){
+            return confirm('Are you sure you want to cancel the subscription? \n\nNote:- Once you canceled it cannot be reversed');
+        }
+    </script>
+
+
+{% endblock newMain %}
