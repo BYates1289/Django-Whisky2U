@@ -1,0 +1,244 @@
+{% extends 'new_template/base.html' %}
+{% block newMain %}
+{% load static %}
+
+<div class="min-h-100">
+    <div class="container-fluid p-2 d-flex justify-content-center align-items-center " id="about-home">
+        <div>
+            <h1 class="text-white text-center bg-black fw-bold">We're More Than Just Whisky Enthusiasts.</h1>
+        </div>
+    </div>
+    <section class="container-fluid" id="marquee">
+        <marquee>
+            <div class="marquee-inner d-flex py-2">
+                <span class="m5-2">
+                    <p class="text-white">We Source The Most Exclusive Whiskies From Around The Globe And Deliver Them
+                        Right To Your Door!</p>
+                </span>
+            </div>
+        </marquee>
+    </section>
+</div>
+<div class="container my-5 text-center">
+    <h3 class="text-orange mb-5"><b>OUR MISSION TO YOU</b></h3>
+    <h1 class="fw-bold my-5">We Want To Fill As Many Mouths As Possible With The <ins class="text-orange"><span
+                class="text-black">Greatest</span></ins> Whiskies From Around The The World.</h1>
+</div>
+<div class="container" id="founder-history">
+    <div class="row my-3">
+        <div class=" col-12 col-md-6">
+            <p class="my-2">Founded by a team of high-school friends way back in 2006 in Worcester, England, Whisky2U
+                started off as a pipe dream. It wasn't until 10 years later, in 2016, that the team began to put their
+                plans into action. Starting from very humble beginnings with not much knowledge about the retail
+                industry, the team persevered, working night and day and have made Whisky2U one of the most popular UK
+                services of it's kind. The love and friendship they share coupled with their passion for whisky and
+                determination to provide their customers the best possible service is the perfect recipe for success.
+            </p>
+            <p class="my-2">We, at Whisky2U, understand that there is no such thing as a typical whisky drinker. That's
+                why we have an adaptable approach to sales. We have customers who purchase a variety of monthly 5cl
+                bottles, who wish to explore as many different drams as possible. We also have others who stick with
+                their favourite tipple and purchase whenever they need replenishing. Anything you need, you can count on
+                us!</p>
+            <div class="d-flex justify-content-center">
+                <img class="img-fluid border-radius about-graphics d-none d-md-block" alt="Whisky Graphic"
+                    src="{% static 'new_static/images/image-08.png' %}">
+            </div>
+        </div>
+        <div class=" col-12 col-md-6">
+            <div class="order-2 d-flex justify-content-center">
+                <img class="img-fluid border-radius about-graphics" alt="Whisky Graphic"
+                    src="{% static 'new_static/images/image-10.png' %}">
+            </div>
+            <div class="order-1">
+                <p class="mt-5">There's no gatekeeping here, no tweed jackets or old school ties or any of that nonsense
+                    - just amazing whiskies heading straight to your door. Welcome to a better world of whisky.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-violet mt-5 py-5 d-flex align-items-center">
+    <div class="container">
+        <h1 class="fw-bold text-black my-5">
+            <b>How We Get Things Done.</b>
+        </h1>
+        <div class="owl-carousel how-we-get">
+            <div class="item">
+                <div class="row p-2">
+                    <div class="col-1">
+                        <h1 class="fw-bold text-black">1</h1>
+                    </div>
+                    <div class="col-11">
+                        <div>
+                            <h4 class="my-3 fw-bold text-black">The World's Best Whiskies.</h4>
+                            <p>We curate our monthly selections with some of the greatest distilleries in the world to
+                                provide you with the most exclusive whiskies from around the globe!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row p-2">
+                    <div class="col-1">
+                        <h1 class="fw-bold text-black">2</h1>
+                    </div>
+                    <div class="col-11">
+                        <div>
+                            <h4 class="my-3 fw-bold text-black">A Simpler Experience.</h4>
+                            <p>We're here to demystify whisky and simplify the experience - so each delivery comes with
+                                simple-to-understand tasting notes, pairings, live online tastings and general whisky
+                                know-how.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row p-2">
+                    <div class="col-1">
+                        <h1 class="fw-bold text-black">3</h1>
+                    </div>
+                    <div class="col-11">
+                        <div>
+                            <h4 class="my-3 fw-bold text-black">Affordable and Accessible</h4>
+                            <p>We work with suppliers directly to keep Whisky2U affordable to all. We offer an online
+                                price promise. Not only will we beat an online retailer but we'll also beat it by 10%
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row p-2">
+                    <div class="col-1">
+                        <h1 class="fw-bold text-black">4</h1>
+                    </div>
+                    <div class="col-11">
+                        <div>
+                            <h4 class="my-3 fw-bold text-black">Don't Be Scared Of Ordering Whisky Online!</h4>
+                            <p>Our packages are shipped in super secure containers and are throughly inspected before
+                                being despatched. Nothing to worry about!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row p-2">
+                    <div class="col-1">
+                        <h1 class="fw-bold text-black">5</h1>
+                    </div>
+                    <div class="col-11">
+                        <div>
+                            <h4 class="my-3 fw-bold text-black">Join The Club</h4>
+                            <p>You're not just signing up for whisky delivery service - you'll also join our community
+                                of curious drinkers to rate your drams, share recommendations and build your own digital
+                                whisky cellar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center align-items-center">
+    <div>
+        <h1 class="fw-bold text-black text-center my-5">
+            HURRAY FOR<br /> COMMUNITY <ins class="text-orange"><span>SPIRITS</span></ins>
+        </h1>
+        <div class="row my-5">
+            <div class="col-12 col-md-4 text-center">
+                <h1 class="fw-bold text-black"><span class="count">2032</span></h1>
+                <p class="fw-bold text-orange"><b>CURRENT MEMBERS</b></p>
+            </div>
+            <div class="col-12 col-md-4 text-center community-count-2">
+                <h1 class="fw-bold text-black"><span class="count">4560</span></h1>
+                <p class="fw-bold text-orange">WHISKIES<br /> SENT</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <h1 class="fw-bold text-black"><span class="count">3412</span></h1>
+                <p class="fw-bold text-orange">LITRES CONSUMED</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-orange p-0">
+    <div class="container-fluid" style="padding: 24px;">
+        <div>
+            <h1 class="fw-bold text-center text-black my-5">Our Team Of Whisky Geniuses.</h1>
+        </div>
+        <div id="team">
+            <div class="owl-carousel team-carusal">
+                <div class="item p-2">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img class="rounded-circle img-fluid mb-2" alt="Tom Employee"
+                                src="{% static 'new_static/images/employee1.jpg' %}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="fw-bold text-black">Jamal</h5>
+                            <h6 class="fw-bold">Chief Executive Officer</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item p-2">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img class="rounded-circle img-fluid mb-2" alt="Thomas Employee"
+                                src="{% static 'new_static/images/employee2.jpg' %}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="fw-bold text-black">Rebecca</h5>
+                            <h6 class="fw-bold">Sales & Marketing Director</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item p-2">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img class="rounded-circle img-fluid mb-2" alt="Nancy Employee"
+                                src="{% static 'new_static/images/employee3.jpg' %}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="fw-bold text-black">Jennifer</h5>
+                            <h6 class="fw-bold">Customer Service Manager</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item p-2">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img class="rounded-circle img-fluid mb-2" alt="Tom Employee"
+                                src="{% static 'new_static/images/employee4.jpg' %}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="fw-bold text-black">Akeno</h5>
+                            <h6 class="fw-bold">Product Manager</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item p-2">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img class="rounded-circle img-fluid mb-2" alt="Thomas Employee"
+                                src="{% static 'new_static/images/employee5.jpg' %}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="fw-bold text-black">Ruben</h5>
+                            <h6 class="fw-bold">IT Services Manager</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item p-2">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img class="rounded-circle img-fluid mb-2" alt="Nancy Employee"
+                                src="{% static 'new_static/images/employee6.jpg' %}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="fw-bold text-black">Richard</h5>
+                            <h6 class="fw-bold">Operations Manager</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock newMain %}
