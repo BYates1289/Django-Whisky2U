@@ -46,6 +46,9 @@ class CustomerAddressForm(forms.ModelForm):
         self.fields['city'].label = "Enter Your City"
         self.fields['city'].widget.attrs['class'] = 'form-input fw-bold col-12 my-1'
 
+        self.fields['state'].label = "Enter Your County"
+        self.fields['state'].widget.attrs['class'] = 'form-input fw-bold col-12 my-1'
+
         self.fields['country'].label = "Enter Your Country"
         self.fields['country'].widget.attrs['class'] = 'form-input fw-bold col-12 my-1'
 
