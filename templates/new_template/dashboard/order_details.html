@@ -9,57 +9,56 @@
           <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Name: {{item.address.fname|title}} {{item.address.lname|title}}</h4>                
+                <h4><b>Name:</b> {{item.address.fname|title}} {{item.address.lname|title}}</h4>                
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Country: {{item.address.country|title}}</h4>
+                <h4><b>Country:</b> {{item.address.country|title}}</h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Address Line 1: {{item.address.address_1|title}} </h4>
+                <h4><b>Address Line 1:</b> {{item.address.address_1|title}} </h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Address Line 2: {{item.address.address_2|title}}</h4>
+                <h4><b>Address Line 2:</b> {{item.address.address_2|title}}</h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>City: {{item.address.city|title}}</h4>
+                <h4><b>City:</b> {{item.address.city|title}}</h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>County: {{item.address.state|title}}</h4>
+                <h4><b>County:</b> {{item.address.state|title}}</h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Phone Number: {{item.address.contact|title}}</h4>
-                <p><span></span></p>
+                <h4><b>Phone Number:</b> {{item.address.contact|title}}</h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Product: {{item.product|title}}</h4>
+                <h4><b>Product:</b> {{item.product|title}}</h4>
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
               <div class="ps-block--contact-info">
-                <h4>Quantity: {{item.quantity|title}}</h4>
+                <h4><b>Quantity:</b> {{item.quantity|title}}</h4>
               </div>
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <div class="ps-block--contact-info text-center">
-                <h4>Delivery Status:</h4>
+                <h4><b>Delivery Status:</b></h4>
                 {% if item.delivery == "delivered" %}
-                <p style="color: green"><span>{{item.delivery|title}}</span></p>
+                <p style="color: green; font-size: 1.5rem;"><span>{{item.delivery|title}}</span></p>
                 {% else %}
-                <p style="color: red"><span>{{item.delivery|title}}</span></p>
+                <p style="color: red; font-size: 1.5rem;"><span>{{item.delivery|title}}</span></p>
                 {% endif %}
               </div>
             </div>
