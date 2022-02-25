@@ -1,0 +1,275 @@
+{% extends 'new_template/base.html' %}
+{% block newMain %}
+
+
+<div class="container-fluid mt-3" id="faq">
+    <div>
+        <div class="bg-black  py-2 mb-3 border-radius">
+            <h1 class="fw-bold text-white text-center my-auto">FAQ's</h1>
+            <div class="mt-5 px-2 desktop-faq" id="desktop-faq-class">
+                <ul class="d-flex justify-content-around m-0 menu">
+                    <li>
+                        <a class="showSingle active" target="6">All</a>
+                    </li>
+                    <li>
+                        <a class="showSingle" target="1">Shop & Subscription</a>
+                    </li>
+                    <li>
+                        <a class="showSingle" target="2">Gift Cards & Rewards</a>
+                    </li>
+                    <li>
+                        <a class="showSingle" target="3">Shipping & Deliveries</a>
+                    </li>
+                    <li>
+                        <a class="showSingle" target="4">Packaging</a>
+                    </li>
+                    <li>
+                        <a class="showSingle" target="5">Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div id="faq-contact-us" class="bg-sky p-5 d-flex justify-content-center border-radius">
+                <div class="my-auto">
+                    <h1 class="fw-bold my-2 text-center">Some Important Things You May Want To Know.</h1>
+                    <p class="my-3 text-center">Don't see what you need? Don't hesitate to contact us and we will get back to you as quickly as possible.</p>
+                    <div class="text-center">
+                        <a href="mailto: hello@whisky2u.io"><button class="btn-2">Contact Us</button></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="container-fluid bg-black border-radius  py-2 my-3" id="faq-for-sm">
+                    <button class="border-0 bg-black text-white fw-bold text-center col-12 " type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq-sm" aria-controls="faq-sm" aria-expanded="false"
+                        aria-label="Toggle navigation">FAQ Filter <span><i class=" ms-2 fas fa-question-circle"></i></span></button>
+                    <div class="collapse navbar-collapse" id="faq-sm">
+                        <ul class="fw-bold">
+                            <li>
+                                <a class="showSingle active" target="6">All</a>
+                            </li>
+                            <li>
+                                <a class="showSingle" target="1">Shop & Subscription</a>
+                            </li>
+                            <li>
+                                <a class="showSingle" target="2">Gifting</a>
+                            </li>
+                            <li>
+                                <a class="showSingle" target="3">Shipping & Deliveries</a>
+                            </li>
+                            <li>
+                                <a class="showSingle" target="4">Packaging</a>
+                            </li>
+                            <li>
+                                <a class="showSingle" target="5">Account</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <section class="cnt mt-2">
+                <div id="div6" class="targetDiv">
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">When will I receive my monthly subscription?</h4>
+                            <p class="text-muted">All whiskies are despatched 1st class on the 1st of the month.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">How do I cancel my subscription?</h4>
+                            <p class="text-muted">Locate the subscription panel from your Dashboard. You can action the cancellation there. We will be sad to see you go, but you're welcome back anytime!</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">I need help. Can I contact you directly?</h4>
+                            <p class="text-muted">Whether you want to send us feedback, need help with something, or just want to
+                                tell us what you think of your latest delivery, you can reach us on our social channels or by emailing hello@whisky2u.io - Whatever it is, we'll get back to you within 48 hours.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">I'm new to whisky, how do I chose what to order?</h4>
+                            <p class="text-muted">Check out the reviews from fellow members who have sampled the whiskies which take your fancy. You can always get in touch with us and we'll be more than happy to assist you.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Do you offer annual subscriptions?</h4>
+                            <p class="text-muted">We currently only offer monthly subscriptions. We intend to role out annual subscriptions later this year, so keep your eyes peeled.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Are there any member rewards?</h4>
+                            <p class="text-muted">All members will get discounts on their 5th and 10th orders. We also have a recycling scheme, whereby members can send us their empties in return for discounts!</p>
+                        </div>
+                    </div>
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Do you offer gift cards?</h4>
+                            <p class="text-muted">Yes we do! Please drop us an email on hello@whisky2u.io and we will send you a custom e-giftcard!</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">My Dad/Gran/Dog isn't great with computers, can I buy on their behalf?</h4>
+                            <p class="text-muted">Yes, providing that you are 18 years or older. Choose a type of whisky for them and check out using their details. The email address you provide will be where we send the order confirmation and monthly shipment emails. We recommend using your own email address and their physical address. (Don't feed dogs whisky).</p>
+                        </div>
+                    </div>
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">How long does it take for my whisky to arrive?</h4>
+                            <p class="text-muted">All of our shipments are sent via Royal Mail 1st Class. You should expect to recieve them around 3rd/4th of each month.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">My delivery is late, what can I do?</h4>
+                            <p class="text-muted">Send your subscription details and the whisky you're expecting to hello@whisky2u.io and we'll get straight on to Royal Mail to find out what's happening. Don't worry, even if the posties have misplaced it, we'll happily pop a replacement in the post for you.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">My whisky turned up damaged! What are my options?</h4>
+                            <p class="text-muted">In the really rare event that your whisky arrives damaged, drop us a line at hello@whisky2u.io with your subscription details. If you can, send us a picture of the damage - it helps speed things up if we can see what the damage is.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">I've moved house, how do I update my address?
+                            </h4>
+                            <p class="text-muted">From the dashboard menu, locate the My Account submenu. You will be able to update your address from here. Remember to let us know before the end of the calendar month, when we process all our deliveries - otherwise your order might end up at your old place.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Do you ship internationally?</h4>
+                            <p class="text-muted">Not yet, but it's certainly on our roadmap.</p>
+                        </div>
+                    </div>
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Can you ensure that my order will arrive safe?</h4>
+                            <p class="text-muted">All our parcels are sent super secure and are marked as fragile cargo. If, in the unlikely event your order turns up damaged, let us know, and we'll simply replace for free.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Can I recycle at home?</h4>
+                            <p class="text-muted">Absolutely. Or better still, send them back to us for discounts off your next order!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="div1" class="targetDiv">
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">What kind of whisky do you sell?
+                            </h4>
+                            <p class="text-muted">We source a variety of whiskies ranging from Single Malt Scotch, Irish Whisky, European Whisky, Bourbon Whisky, Tennessee Whisky, Rye Whisky and Japense Whisky.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">When will I receive my monthly subscription?</h4>
+                            <p class="text-muted">All whiskies are despatched 1st class on the 1st of the month.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Do you offer annual subscriptions?</h4>
+                            <p class="text-muted">We currently only offer monthly subscriptions. We intend to role out annual subscriptions later this year, so keep your eyes peeled.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">How do I cancel my subscription?</h4>
+                            <p class="text-muted">Locate the subscription panel from your Dashboard. You can action the cancellation there. We will be sad to see you go, but you're welcome back anytime!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="div2" class="targetDiv">
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Do you offer gift cards?</h4>
+                            <p class="text-muted">Yes we do! Please drop us an email on hello@whisky2u.io and we will send you a custom e-giftcard!</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Are there any member rewards?</h4>
+                            <p class="text-muted">All members will get discounts on their 5th and 10th orders. We also have a recycling scheme, whereby members can send us their empties in return for discounts!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="div3" class="targetDiv">
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">When will I receive my monthly subscription?</h4>
+                            <p class="text-muted">All whiskies are despatched 1st class on the 1st of the month.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">How long does it take for my whisky to arrive?</h4>
+                            <p class="text-muted">All of our shipments are sent via Royal Mail 1st Class. You should expect to recieve them around 3rd/4th of each month.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">My delivery is late, what can I do?</h4>
+                            <p class="text-muted">Send your subscription details and the whisky you're expecting to hello@whisky2u.io and we'll get straight on to Royal Mail to find out what's happening. Don't worry, even if the posties have misplaced it, we'll happily pop a replacement in the post for you.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Do you ship internationally?</h4>
+                            <p class="text-muted">Not yet, but it's certainly on our roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="div4" class="targetDiv">
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Can you ensure that my order will arrive safe?</h4>
+                            <p class="text-muted">All our parcels are sent super secure and are marked as fragile cargo. If, in the unlikely event your order turns up damaged, let us know, and we'll simply replace for free.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">My whisky turned up damaged! What are my options?</h4>
+                            <p class="text-muted">In the really rare event that your whisky arrives damaged, drop us a line at hello@whisky2u.io with your subscription details. If you can, send us a picture of the damage - it helps speed things up if we can see what the damage is.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="div5" class="targetDiv">
+                    <div class="question-area">
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">I need help. Can I contact you directly?</h4>
+                            <p class="text-muted">Whether you want to send us feedback, need help with something, or just want to
+                            tell us what you think of your latest delivery, you can reach us on our social channels or by emailing hello@whisky2u.io - Whatever it is, we'll get back to you within 48 hours.</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">I'm new to whisky, how do I chose what to order?</h4>
+                            <p class="text-muted">Check out the reviews from fellow members who have sampled the whiskies which take your fancy. You can always get in touch with us and we'll be more than happy to assist you.</p>
+                        </div> 
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">I've moved house, how do I update my address?</h4>
+                            <p class="text-muted">From the dashboard menu, locate the My Account submenu. You will be able to update your address from here. Remember to let us know before the end of the calendar month, when we process all our deliveries - otherwise your order might end up at your old place.</p>
+                        </div> 
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">My Dad/Gran/Dog isn't great with computers, can I buy on their behalf?</h4>
+                            <p class="text-muted">Yes, providing that you are 18 years or older. Choose a type of whisky for them and check out using their details. The email address you provide will be where we send the order confirmation and monthly shipment emails. We recommend using your own email address and their physical address. (Don't feed dogs whisky).</p>
+                        </div> 
+                        <div class="my-3">
+                            <h4 class="mb-3 fw-bold">Can I recycle at home?</h4>
+                            <p class="text-muted">Absolutely. Or better still, send them back to us for discounts off your next order!</p>
+                        </div>                     
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $(".targetDiv").show();
+    });
+
+
+    jQuery(function () {
+        jQuery('#showall').click(function () {
+            jQuery('.targetDiv').show('.cnt');
+        });
+        jQuery('#hideall').click(function () {
+            jQuery('.targetDiv').hide('.cnt');
+        });
+
+        jQuery('.showSingle').click(function () {
+            jQuery('.targetDiv').hide('.cnt');
+            jQuery('#div' + $(this).attr('target')).slideToggle();
+
+        });
+    });
+</script>
+<script type="text/javascript">
+    var selector = '.desktop-faq ul li a';
+
+    $(selector).on('click', function () {
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+
+{% endblock newMain %}
