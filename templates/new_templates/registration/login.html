@@ -1,0 +1,43 @@
+{% extends 'new_template/base.html' %}
+{% block newMain %}
+
+
+<div class="container d-flex justify-content-center">
+    <div class="row ">
+        <div id="login-form" class="px-0">
+            <form class="col-12 p-2 " action="" method="post" novalidate>
+                {% csrf_token %}
+                <h1 class="fw-bold text-dark my-3 text-center">Welcome Back To Curiosity.</h1>
+                <p class="text-center text-muted my-2">Log In To Find Your Next Tipple.</p>
+                <div class="row d-flex justify-content-center">
+                    {% for form in form %}
+                        <div class="col-12 d-flex justify-content-center">
+                            {{form}}
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <p style="color:red; margin-bottom:0px; margin-bottom:20px;" class="text-danger">{{form.errors|striptags}} <p>
+                        </div>
+                    {% endfor %}
+
+                    <div class="col-12 d-flex justify-content-center">
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger" role="alert">
+                                <p style="padding-left:20px;">{{form.non_field_errors|striptags}}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                   
+
+                    <a href="{% url 'password_reset' %}" class="text-dark text-center my-2 fw-bold">Forgot Password?</a>
+                    <a href="" class="text-center col-12"><button type="submit" class="btn-login text-center fw-bold ">Sign In</button></a>
+                    <div class="text-center">
+                        <p class="my-2">Are You New Here?<span><a href="{% url 'register' %}" class="text-dark fw-bold"><ins>Join Now</ins></a></span>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock newMain %}
