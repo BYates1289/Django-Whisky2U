@@ -3,18 +3,20 @@
     <div class="container-fluid footer-container bg-black py-5">
         <div class="container">
             <div class="row d-flex justify-content-around">
-                <div class="col-12 col-md-6 mt-3">
+                <div class="col-12 text-center">
                     <h1 class="fw-bold text-white my-2 text-center">Start Your Adventure</h1>
                 </div>
-                <div class="col-12 col-md-6 my-3">
+                <div class="col-12">
                     <div class="d-flex justify-content-center mt-3">
-                        <div class="col-md-6 join-shop-btn">
-                            {% if not user.is_authenticated %}
-                                <a href="{% url 'register' %}"><button class="btn-1 fw-bold w-100">JOIN CLUB</button></a>
-                            {% endif %}
-                        </div>
-                        <div class="col-md-6 join-shop-btn ms-3">
-                            <a href="{% url 'pages:shop' %}"><button class="btn-1 fw-bold w-100">SHOP</button></a>
+                        <div class="text-center">
+                            <div class="col-12 m-1">
+                                {% if not user.is_authenticated %}
+                                    <a href="{% url 'register' %}"><button class="btn-1 fw-bold">JOIN CLUB</button></a>
+                                {% endif %}
+                            </div>
+                            <div class="col-12 m-1">
+                                <a href="{% url 'pages:shop' %}"><button class="btn-1 fw-bold">SHOP</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
