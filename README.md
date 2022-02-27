@@ -75,7 +75,7 @@
                 <ul>
                     <li>Alot of the images have been designed by a friend of mine who works in Graphic Design. Other images include bottles of whisky, which have been sourced from an online whisky retailer.</li>
                 </ul>
-            <li id="wireframes">Wireframes</li>
+            <li id="wireframes">Wireframe</li>
                 <ul>
                     <li>Project Wireframe - <a href="#">View</a></li>
                 </ul>
@@ -166,36 +166,34 @@
 
 <h2 id="testing">Testing</h2>
 <h3 id="code-verification">Code Verification</h3>
-<p>The W3C HTML Validator, W3C CSS Validator, JSHint and ExtendsClass services were used to validate code to ensure there were no syntax errors in the project.</p>
+<p>JavaScript and Python code was put through a validator to ensure of no errors.</p>
 <ul>
-    <li>W3C HTML Validator - <a href="#">Results</a></li>
-    <li>W3C CSS Validator - <a href="#">Results</a></li>
-    <li>JSHint - <a href="#">Results</a></li>
+    <li>JSHint - <a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/JSHint.pdf">Results</a></li>
     <li>Python Validator - Code was formatted by the <a href="https://marketplace.visualstudio.com/items?itemName=himanoa.Python-autopep8">autopep8</a> VSCode extension.</li>
 </ul>
 <h3 id="speed-test">Speed Test</h3>
 <p>Site speed test was performed by <a href="https://gtmetrix.com/">GTMetrix</a>. Here are the results.</p>
-<img src="#">
-<p>A full report can be viewed <a href="#">here</a>.</p>
+<img src="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/GTMetrix.png">
+<p>A full report can be viewed <a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/GTmetrix%20Performance%20Report.pdf">here</a>.</p>
 <h3 id="cross-browser">Cross Browser Testing</h3>
 <p>This project was tested with all major browsers and displayed as expected. Results can be seen here.</p>
 <ul>
-    <li><a href="#">Google Chrome</a></li>
-    <li><a href="#">Firefox</a></li>
-    <li><a href="#">Safari</a></li>
-    <li><a href="#">Opera</a></li>
-    <li><a href="#">Microsoft Edge</a></li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/Chrome.pdf">Google Chrome</a></li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/Firefox.pdf">Firefox</a></li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/Safari.png">Safari</a></li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/Opera.pdf">Opera</a></li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/Edge.pdf">Microsoft Edge</a></li>
 </ul>
 <h3 id="responsive">Responsive Testing</h3>
 <p>Responsive testing was carried out with Chrome Dev Tools. The results for some popular devices can be seen below.</p>
 <ul>
-    <li><a href="#">Galaxy Fold</a>(280px)</li>
-    <li><a href="#">iPhone SE</a>(320px)</li>
-    <li><a href="#">iPhone X</a>(375px)</li>  
-    <li><a href="#">Pixel 2 XL</a>(411px)</li>
-    <li><a href="#">Surface Duo</a>(540px)</li>
-    <li><a href="#">iPad</a>(768px)</li>
-    <li><a href="#">iPad Pro</a>(1024px)</li>   
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(Galaxy%20Fold).png">Galaxy Fold</a>(280px)</li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(iPhone%20SE).png">iPhone SE</a>(320px)</li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(iPhone%20X).png">iPhone X</a>(375px)</li>  
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(Pixel%202%20XL).png">Pixel 2 XL</a>(411px)</li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(Surface%20Duo).png">Surface Duo</a>(540px)</li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(iPad).png">iPad</a>(768px)</li>
+    <li><a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/whisky-project-ms4.herokuapp.com_(iPad%20Pro).png">iPad Pro</a>(1024px)</li>   
 </ul>
 <h3 id="testing-user-stories">Testing User Stories from User Experience (UX) Section</h3>
 <ul>
