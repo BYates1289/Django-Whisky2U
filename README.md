@@ -23,7 +23,6 @@
     <li><a href="#testing">Testing</a></li>
         <ul>
             <li><a href="#code-verification">Code Verification</a></li>
-            <li><a href="#lighthouse">Lighthouse</a></li>
             <li><a href="#speed-test">Speed Test</a></li>
             <li><a href="#cross-browser">Cross-Browser</a></li>
             <li><a href="#responsive">Responsive Testing</a></li>
@@ -172,14 +171,12 @@
     <li>W3C HTML Validator - <a href="#">Results</a></li>
     <li>W3C CSS Validator - <a href="#">Results</a></li>
     <li>JSHint - <a href="#">Results</a></li>
-    <li>Python Validator - <a href="#">Results</a></li>
+    <li>Python Validator - Code was formatted by the <a href="https://marketplace.visualstudio.com/items?itemName=himanoa.Python-autopep8">autopep8</a> VSCode extension.</li>
 </ul>
-<h3 id="lighthouse">Lighthouse</h3>
-<p>Performance of the site was analysed by <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>. Here are the results.</p>
-<img src="#">
 <h3 id="speed-test">Speed Test</h3>
 <p>Site speed test was performed by <a href="https://gtmetrix.com/">GTMetrix</a>. Here are the results.</p>
 <img src="#">
+<p>A full report can be viewed <a href="#">here</a>.</p>
 <h3 id="cross-browser">Cross Browser Testing</h3>
 <p>This project was tested with all major browsers and displayed as expected. Results can be seen here.</p>
 <ul>
@@ -188,8 +185,6 @@
     <li><a href="#">Safari</a></li>
     <li><a href="#">Opera</a></li>
     <li><a href="#">Microsoft Edge</a></li>
-    <li><a href="#">Tor</a></li>
-    <li><a href="#">IE11</a></li>
 </ul>
 <h3 id="responsive">Responsive Testing</h3>
 <p>Responsive testing was carried out with Chrome Dev Tools. The results for some popular devices can be seen below.</p>
@@ -249,7 +244,7 @@
     <li>I think the site would benefit from pagination. Throughtout testing, I only had a few products listed and didn't think of this at the time. This was an oversight by myself.</li>
 </ul>
 <h2 id="bugs">Bugs</h2>
-<p>If a user purchases a product, which is then marked as delivered by admin. If they then subscribe to the same product on a monthly basis, it is automatically marked as delivered after checkout.</p>
+<strike>If a user purchased a product, which is then marked as delivered by admin. If they then subscribe to the same product on a monthly basis, it is automatically marked as delivered after checkout.</strike>
 <h2 id="deployment">Deployment</h2>
 <h3 id="heroku">Heroku</h3>
 <p>To deploy this project to Heroku, the following steps were taken...</p>
