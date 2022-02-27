@@ -77,7 +77,7 @@
                 </ul>
             <li id="wireframes">Wireframe</li>
                 <ul>
-                    <li>Project Wireframe - <a href="#">View</a></li>
+                    <li>Project Wireframe - <a href="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/Home.pdf">View</a></li>
                 </ul>
             </li>
         </ul>
@@ -163,6 +163,9 @@
             <li>Essential tools for debugging code.</li>
         </ul>
 </ol>
+
+<h2 id="dbschema">PostgreSQL Database Schema</h2>
+<img src="https://github.com/BYates1289/Whisky-Project-MS4/blob/main/static/new_static/images/testing/dbschema.png">
 
 <h2 id="testing">Testing</h2>
 <h3 id="code-verification">Code Verification</h3>
@@ -290,7 +293,6 @@
 <ul>
     <li>Bootstrap 5: Bootstrap Library used throughout the project to make site responsive.</li>
     <li>Owl-Carousel for the touch enabled, responsive carousel.</li>
-    <li>My friend, Lewis, for the site graphics</li>
 </ul>
 <h3 id="content">Content</h3>
 <ul>
@@ -300,6 +302,7 @@
 <ul>
     <li>The Logo was designed on <a href="https://www.freelogodesign.org/">https://www.freelogodesign.org/</a></li>
     <li>The product images were downloaded from <a href="https://www.oldandrarewhisky.co.uk/">https://www.oldandrarewhisky.co.uk/</a></li>
+    <li>My graphic designer friend, Lewis, for the site graphics.</li>
 </ul>
 <h3 id="acknowledgements">Acknowledgements</h3>
 <ul>
