@@ -11,6 +11,7 @@ import os
 # stripe.api_key = SECRET_KEY
 stripe.api_key = os.environ['SECRET_KEY']
 
+
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
         if not email:
@@ -44,16 +45,16 @@ class CustomUser(AbstractUser):
         return self.email
 
 
-
 def post_save_customerUser(sender, instance, created, *args, **kwargs):
     if created:
         CustomUser.objects.get_or_create(email=instance)
 
     user, created = CustomUser.objects.get_or_create(email=instance)
-    
+
     if user.stripe_id is None or user.stripe_id == '':
         user_stripe_id = stripe.Customer.create(email=instance.email)
         user.stripe_id = user_stripe_id.id
         user.save()
+
 
 post_save.connect(post_save_customerUser, sender=CustomUser)

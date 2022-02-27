@@ -31,7 +31,8 @@ class CustomerDeliver(LoginRequiredMixin, View):
             action = status
             class_active = status
 
-        context = {"items": items, "class_active": class_active, "action": action}
+        context = {"items": items,
+                   "class_active": class_active, "action": action}
         return render(request, "new_template/dashboard/delivery.html", context)
 
 

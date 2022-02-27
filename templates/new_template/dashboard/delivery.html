@@ -2,51 +2,53 @@
 {% block newMain %}
 
 
-    <div class="container text-truncate" style="overflow-x:auto; font-size:80%">
-        <div class="row">
-            <br>
-            <h1 class=" fw-bold text-dark my-3 text-center">
-                Delivery Report 
-            </h1>
-                
-            <table class="table ps-table ps-table--vendor">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Name</th>
-                        <th>Details</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+<div class="container text-truncate" style="overflow-x:auto; font-size:80%">
+    <div class="row">
+        <br>
+        <h1 class=" fw-bold text-dark my-3 text-center">
+            Delivery Report
+        </h1>
 
-                {% for r in items %}
+        <table class="table ps-table ps-table--vendor">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
-                    <tbody>
-                        <tr>
-                            <td> {{r.date}}</td>
-                            <td> {{r.address}}</td>
-                            <td> <a href="{% url 'order:address_details' r.pk %}"> View Details </a> </td>
-                            <td>
-                                <form action="{% url 'order:deliver_done' r.pk %}" method="POST">
-                                    {% csrf_token %}
-                                    <select name="status" onchange=' this.form.submit(); '>
-                                        <option value='undelivered' {% if r.delivery == "undelivered" %} {{"selected"}} {% endif %} >undelivered</option>
-                                        <option value='delivered' {% if r.delivery == "delivered" %} {{"selected"}} {% endif %} >delivered</option>
-                                    </select>
-                                </form> 
-                            </td>
+            {% for r in items %}
 
-                        </tr>
-                    </tbody>
+            <tbody>
+                <tr>
+                    <td> {{r.date}}</td>
+                    <td> {{r.address}}</td>
+                    <td> <a href="{% url 'order:address_details' r.pk %}"> View Details </a> </td>
+                    <td>
+                        <form action="{% url 'order:deliver_done' r.pk %}" method="POST">
+                            {% csrf_token %}
+                            <select name="status" onchange=' this.form.submit(); '>
+                                <option value='undelivered' {% if r.delivery == "undelivered" %} {{"selected"}}
+                                    {% endif %}>undelivered</option>
+                                <option value='delivered' {% if r.delivery == "delivered" %} {{"selected"}} {% endif %}>
+                                    delivered</option>
+                            </select>
+                        </form>
+                    </td>
 
-                {% endfor %}
+                </tr>
+            </tbody>
+
+            {% endfor %}
 
 
-            </table>
-                
-            </div>
-        </div>
+        </table>
+
     </div>
+</div>
+</div>
 
 
 {% endblock newMain %}

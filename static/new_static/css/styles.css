@@ -521,6 +521,7 @@ active {
     .desktop-faq {
         display: block !important
     }
+
     .logo {
         max-width: 400px !important;
     }
@@ -553,11 +554,13 @@ active {
 .min-h-100 {
     min-height: 100vh
 }
+
 @media (max-device-width:350px) {
     .logo {
         width: 180px !important
     }
 }
+
 @media (min-width: 402px) and (max-width: 766px) {
     .logo {
         width: 300px;
@@ -628,11 +631,13 @@ active {
     border-top: 0;
     border-bottom: 0
 }
+
 @media (max-width: 310px) {
     .logo {
         width: 160px !important;
     }
 }
+
 @media (min-device-width:319px) and (max-device-width:593px) {
     .form-input {
         width: 300px !important;

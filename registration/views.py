@@ -16,7 +16,6 @@ class RegisterView(View):
         }
         return render(request, 'new_template/registration/register.html', context)
 
-
     def post(self, request, *args, **kwargs):
         signup_form = UserRegisterForm(request.POST)
         context = {
@@ -29,7 +28,8 @@ class RegisterView(View):
             user = auth.authenticate(
                 request, username=email, password=password)
             auth.login(request, user)
-            messages.success(request, _("Thanks for signing up. We appriciate you"))
+            messages.success(request, _(
+                "Thanks for signing up. We appriciate you"))
             return redirect('pages:home')
         else:
             errorStr = ""
@@ -41,10 +41,10 @@ class RegisterView(View):
 
 
 class LoginView(views.LoginView):
-    template_name           = 'new_template/registration/login.html'
-    authentication_form     = UserLoginForm
+    template_name = 'new_template/registration/login.html'
+    authentication_form = UserLoginForm
     redirect_authenticated_user = True
-    
+
     def get_success_url(self):
         url = self.get_redirect_url()
         if url:
@@ -54,19 +54,19 @@ class LoginView(views.LoginView):
 
 
 class PasswordReset(views.PasswordResetView):
-    template_name   = 'new_template/registration/password_reset.html' 
-    form_class      = PasswordResetForm
-    success_url     = reverse_lazy('password_reset_done')
+    template_name = 'new_template/registration/password_reset.html'
+    form_class = PasswordResetForm
+    success_url = reverse_lazy('password_reset_done')
 
 
 class PasswordResetDone(views.PasswordResetDoneView):
-    template_name   = 'new_template/registration/password_reset_done.html'
+    template_name = 'new_template/registration/password_reset_done.html'
 
 
 class PasswordResetConfirm(views.PasswordResetConfirmView):
-    template_name   = 'new_template/registration/password_reset_confirm.html'
-    form_class      = NewPasswordForm
+    template_name = 'new_template/registration/password_reset_confirm.html'
+    form_class = NewPasswordForm
 
 
 class PasswordResetComplete(views.PasswordResetCompleteView):
-    template_name   = 'new_template/registration/password_reset_complete.html'
+    template_name = 'new_template/registration/password_reset_complete.html'

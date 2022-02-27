@@ -2,45 +2,55 @@
 <header id="header" class="bg-black">
     <nav class="navbar navbar-expand-lg  px-2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'pages:home' %}"><img src="{% static 'new_static/images/logo.png' %}" alt="Whisky Logo" class="img-fluid logo" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnavigation" aria-controls="mainnavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="{% url 'pages:home' %}"><img src="{% static 'new_static/images/logo.png' %}"
+                    alt="Whisky Logo" class="img-fluid logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnavigation"
+                aria-controls="mainnavigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars text-secondary justify-content-end"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainnavigation">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-2 ms-lg-5 left fw-bold ">
-                    
-                    {% if user.is_superuser %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Subscription
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item {% if class_active == "all" %} active {% endif %}" href="{% url 'pages:admin_panel' "all" %}">All</a>
-                            <a class="dropdown-item {% if class_active == "active" %} active {% endif %}" href="{% url 'pages:admin_panel' "active" %}">Active</a>
-                            <a class="dropdown-item {% if class_active == "unpaid" %} active {% endif %}" href="{% url 'pages:admin_panel' "unpaid" %}">Unpaid</a>
-                            <a class="dropdown-item {% if class_active == "single" %} active {% endif %}" href="{% url 'pages:admin_panel' "single" %}">Single</a>
-                            <a class="dropdown-item {% if class_active == "canceled" %} active {% endif %}" href="{% url 'pages:admin_panel' "canceled" %}">Cancelled</a>
-                            
-                            </div>
-                        </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Delivery
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item {% if class_active == "all" %} active {% endif %}" href="{% url 'order:deliver' %}">All</a>
-                                <a class="dropdown-item {% if class_active == "delivered" %} active {% endif %}" href="{% url 'order:deliver' "delivered" %}">Delivered</a>
-                                <a class="dropdown-item {% if class_active == "undelivered" %} active {% endif %}" href="{% url 'order:deliver' "undelivered" %}">Not Delivered</a>
-                            </div>
-                        </li>
+                    {% if user.is_superuser %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Subscription
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item {% if class_active == "all" %} active {% endif %}"
+                                href="{% url 'pages:admin_panel' "all" %}">All</a>
+                            <a class="dropdown-item {% if class_active == "active" %} active {% endif %}"
+                                href="{% url 'pages:admin_panel' "active" %}">Active</a>
+                            <a class="dropdown-item {% if class_active == "unpaid" %} active {% endif %}"
+                                href="{% url 'pages:admin_panel' "unpaid" %}">Unpaid</a>
+                            <a class="dropdown-item {% if class_active == "single" %} active {% endif %}"
+                                href="{% url 'pages:admin_panel' "single" %}">Single</a>
+                            <a class="dropdown-item {% if class_active == "canceled" %} active {% endif %}"
+                                href="{% url 'pages:admin_panel' "canceled" %}">Cancelled</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Delivery
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item {% if class_active == "all" %} active {% endif %}"
+                                href="{% url 'order:deliver' %}">All</a>
+                            <a class="dropdown-item {% if class_active == "delivered" %} active {% endif %}"
+                                href="{% url 'order:deliver' "delivered" %}">Delivered</a>
+                            <a class="dropdown-item {% if class_active == "undelivered" %} active {% endif %}"
+                                href="{% url 'order:deliver' "undelivered" %}">Not Delivered</a>
+                        </div>
+                    </li>
 
                     {% endif %}
-                    
+
                     {% if not user.is_superuser %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pages:shop' %}">Shop</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'pages:shop' %}">Shop</a>
+                    </li>
                     {% endif %}
 
                     <li class="nav-item">
@@ -51,34 +61,39 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'product:faq' %}">FAQ</a>
                     </li>
-                    
+
                 </ul>
                 <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0  ms-lg-0">
                     <li class="nav-item">
                         {% if user.is_authenticated %}
-                            {% if not user.is_superuser %}
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item {% if myaccount == "true" %} active {% endif %}" href="{% url 'pages:address' %}" class="text-white">My Account</a>
-                                        <a class="dropdown-item {% if single_item == "false" %} active {% endif %}" href="{% url 'pages:customer_dashboard' "subscription" %}" class="text-white">Subscription</a>
-                                        <a class="dropdown-item {% if single_item == "true" %} active {% endif %}" href="{% url 'pages:customer_dashboard' "single" %}" class="text-white">Single</a>
-                                    </div>
-                                </li>
-                            {% endif %}
-                            
-                            <a href="{% url 'logout' %}"><button class="btn-4">Logout</button></a>
-                        {% else %}
-                            <a class="nav-link" href="{% url 'login' %}">
-                                <p>Already Have An<br>Account? <ins>Sign In</ins></p>
-                            </a>
-                        {% endif %}
+                        {% if not user.is_superuser %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item {% if myaccount == "true" %} active {% endif %}"
+                                href="{% url 'pages:address' %}" class="text-white">My Account</a>
+                            <a class="dropdown-item {% if single_item == "false" %} active {% endif %}"
+                                href="{% url 'pages:customer_dashboard' "subscription" %}"
+                                class="text-white">Subscription</a>
+                            <a class="dropdown-item {% if single_item == "true" %} active {% endif %}"
+                                href="{% url 'pages:customer_dashboard' "single" %}" class="text-white">Single</a>
+                        </div>
                     </li>
-                        {% if not user.is_authenticated %}
-                            <li class="nav-item my-auto">
-                                <a href="{% url 'register' %}"><button class="btn-4">JOIN CLUB</button></a>
-                            </li>
-                        {% endif %}
+                    {% endif %}
+
+                    <a href="{% url 'logout' %}"><button class="btn-4">Logout</button></a>
+                    {% else %}
+                    <a class="nav-link" href="{% url 'login' %}">
+                        <p>Already Have An<br>Account? <ins>Sign In</ins></p>
+                    </a>
+                    {% endif %}
+                    </li>
+                    {% if not user.is_authenticated %}
+                    <li class="nav-item my-auto">
+                        <a href="{% url 'register' %}"><button class="btn-4">JOIN CLUB</button></a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

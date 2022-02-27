@@ -111,7 +111,8 @@ class EditComment(LoginRequiredMixin, View):
                 stars=rate,
             )
 
-            product.total_ratings = Rating.objects.filter(product=product).count()
+            product.total_ratings = Rating.objects.filter(
+                product=product).count()
             ratings = Rating.objects.filter(product=product)
             num = int(ratings.aggregate(Avg("stars"))["stars__avg"])
             product.rating_number = num

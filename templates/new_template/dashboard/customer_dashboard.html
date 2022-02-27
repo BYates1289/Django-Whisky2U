@@ -1,113 +1,118 @@
 {% extends 'new_template/base.html' %}
 {% block newMain %}
 
-    {% if single_item == "false" %}
+{% if single_item == "false" %}
 
-        <div class="container text-truncate" style="overflow-x:auto; font-size:80%">
-            <div class="row">
-                <br>
-                <h1 class="fw-bold text-dark my-3 text-center">
-                    Subscription Report 
-                </h1>
-                        
-                <table class="table ps-table ps-table--vendor">
-                    <thead>
-                        <tr>
-                            <th>Subscription</th>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Next Invoice</th>
-                            <th>Status</th>
-                            <th>Delivery </th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+<div class="container text-truncate" style="overflow-x:auto; font-size:80%">
+    <div class="row">
+        <br>
+        <h1 class="fw-bold text-dark my-3 text-center">
+            Subscription Report
+        </h1>
 
-                    {% for r in subscription %}
+        <table class="table ps-table ps-table--vendor">
+            <thead>
+                <tr>
+                    <th>Subscription</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Next Invoice</th>
+                    <th>Status</th>
+                    <th>Delivery </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
-                        <tbody>
-                            <tr>
-                                <td class="text-truncate">{{r.current_period_start}}</td>
-                                <td class="text-truncate"> <a href="{% url 'product:single_product' r.product.pk %}"> {{r.product}} </a> </td>
-                                <td>£{{r.amount}}</td>
-                                <td>{{r.quantity}}</td>
-                                <td>£{{r.total}}</td>
-                                <td>{{r.current_period_end}}</td>
-                            
-                                {% if r.status == "active" %}
-                                    <td style="color:green">{{r.status|upper}}</td>
-                                {% else %}
-                                    <td style="color:red">{{r.status|upper}}</td>
-                                {% endif %}
+            {% for r in subscription %}
 
-                                <td>{{r.delivery.delivery}} </td>
-                            
-                                {% if r.status == "active" %}
-                                    <td> <a href="{% url 'pages:cancel_subscription' r.id %}" onclick='return checkdel()'> Cancel </a></td>
-                                {% elif r.status == "canceled" %}
-                                    <td>-</td>
-                                {% endif %}
+            <tbody>
+                <tr>
+                    <td class="text-truncate">{{r.current_period_start}}</td>
+                    <td class="text-truncate"> <a href="{% url 'product:single_product' r.product.pk %}"> {{r.product}}
+                        </a> </td>
+                    <td>£{{r.amount}}</td>
+                    <td>{{r.quantity}}</td>
+                    <td>£{{r.total}}</td>
+                    <td>{{r.current_period_end}}</td>
 
-                            </tr>
-                        </tbody>
+                    {% if r.status == "active" %}
+                    <td style="color:green">{{r.status|upper}}</td>
+                    {% else %}
+                    <td style="color:red">{{r.status|upper}}</td>
+                    {% endif %}
 
-                    {% endfor %}
+                    <td>{{r.delivery.delivery}} </td>
 
+                    {% if r.status == "active" %}
+                    <td> <a href="{% url 'pages:cancel_subscription' r.id %}" onclick='return checkdel()'> Cancel </a>
+                    </td>
+                    {% elif r.status == "canceled" %}
+                    <td>-</td>
+                    {% endif %}
 
-                </table>
-            </div>
-        </div>
+                </tr>
+            </tbody>
 
-    {% elif single_item == "true" %}
-
-        <div class="container" style="overflow-x:auto; font-size:80%">
-            <div class="row ">
-                <br>
-                <h1 class=" fw-bold text-dark my-3 text-center">
-                    Single Item Report 
-                </h1>
-                    
-                <table class="table ps-table ps-table--vendor">
-                    <thead>
-                        <tr>
-                            <th>Created</th>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Delivery </th>
-                        </tr>
-                    </thead>
-
-                    {% for r in single %}
-
-                        <tbody>
-                            <tr>
-                                <td class="text-truncate">{{r.current_period_start}}</td>
-                                <td class="text-truncate"> <a href="{% url 'product:single_product' r.product.pk %}"> {{r.product}} </a> </td>
-                                <td>£{{r.amount}}</td>
-                                <td>{{r.quantity}}</td>
-                                <td>£{{r.total}}</td>
-                                <td>{{r.delivery.delivery}} </td>
-                            </tr>
-                        </tbody>
-
-                    {% endfor %}
+            {% endfor %}
 
 
-                </table>
-            </div>
-        </div>
+        </table>
+    </div>
+</div>
 
-    {% endif %}
+{% elif single_item == "true" %}
 
-    <script>
-        function checkdel(){
-            return confirm('Are you sure you want to cancel the subscription? \n\nNote:- Once you have cancelled it cannot be reversed');
-        }
-    </script>
+<div class="container" style="overflow-x:auto; font-size:80%">
+    <div class="row ">
+        <br>
+        <h1 class=" fw-bold text-dark my-3 text-center">
+            Single Item Report
+        </h1>
+
+        <table class="table ps-table ps-table--vendor">
+            <thead>
+                <tr>
+                    <th>Created</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Delivery </th>
+                </tr>
+            </thead>
+
+            {% for r in single %}
+
+            <tbody>
+                <tr>
+                    <td class="text-truncate">{{r.current_period_start}}</td>
+                    <td class="text-truncate"> <a href="{% url 'product:single_product' r.product.pk %}"> {{r.product}}
+                        </a> </td>
+                    <td>£{{r.amount}}</td>
+                    <td>{{r.quantity}}</td>
+                    <td>£{{r.total}}</td>
+                    <td>{{r.delivery.delivery}} </td>
+                </tr>
+            </tbody>
+
+            {% endfor %}
+
+
+        </table>
+    </div>
+</div>
+
+{% endif %}
+
+<script>
+    function checkdel() {
+        return confirm(
+            'Are you sure you want to cancel the subscription? \n\nNote:- Once you have cancelled it cannot be reversed'
+            );
+    }
+</script>
 
 
 {% endblock newMain %}

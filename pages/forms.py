@@ -3,6 +3,7 @@ from django.http import request
 from order.models import Address
 from .models import Review
 
+
 class ReviewForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -18,12 +19,9 @@ class ReviewForm(forms.ModelForm):
         self.fields['message'].widget.attrs['class'] = 'form-control'
         self.fields['message'].widget.attrs['placeholder'] = 'Message'
 
-
-
     class Meta:
         model = Review
         fields = '__all__'
-
 
 
 class CustomerAddressForm(forms.ModelForm):
@@ -55,8 +53,7 @@ class CustomerAddressForm(forms.ModelForm):
         self.fields['contact'].label = "Contact Number"
         self.fields['contact'].widget.attrs['class'] = 'form-input fw-bold col-12 my-1'
 
-
     class Meta:
         model = Address
-        exclude=('user',)
+        exclude = ('user',)
         fields = '__all__'

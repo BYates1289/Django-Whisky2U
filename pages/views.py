@@ -20,7 +20,6 @@ stripe.api_key = os.environ["SECRET_KEY"]
 
 class HomeView(View):
 
-
     def get(self, request, *args, **kwargs):
         # if request.user.is_superuser:
         # return redirect('pages:admin_panel')
@@ -34,7 +33,6 @@ class NewDashboard(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         product = Product.objects.all()
 
-
         context = {
             "product": product,
             # 'product_1': prd_5cl,
@@ -46,7 +44,6 @@ class NewDashboard(LoginRequiredMixin, View):
 class ShopView(View):
     def get(self, request, *args, **kwargs):
         product = Product.objects.all()
-
 
         context = {
             "product": product,

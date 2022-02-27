@@ -10,7 +10,10 @@ urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
 
     path('passwordreset/', PasswordReset.as_view(), name='password_reset'),
-    path('passwordresetdone/', PasswordResetDone.as_view(), name='password_reset_done'),
-    path('passwordresetconfirm/<uidb64>/<token>/', PasswordResetConfirm.as_view(), name='password_reset_confirm'),
-    path('passwordresetcomplete/', PasswordResetComplete.as_view(), name='password_reset_complete'),
+    path('passwordresetdone/', PasswordResetDone.as_view(),
+         name='password_reset_done'),
+    path('passwordresetconfirm/<uidb64>/<token>/',
+         PasswordResetConfirm.as_view(), name='password_reset_confirm'),
+    path('passwordresetcomplete/', PasswordResetComplete.as_view(),
+         name='password_reset_complete'),
 ]

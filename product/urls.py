@@ -4,7 +4,8 @@ from product.views import SingleProductView, BuyNow, MonthlySubscription, FaqPag
 app_name = "product"
 
 urlpatterns = [
-    path('single_product/<int:id>', SingleProductView.as_view(), name='single_product'),
+    path('single_product/<int:id>',
+         SingleProductView.as_view(), name='single_product'),
     path('add-comment/', AddComment.as_view(), name='add_comment'),
     path('edit-comment/', EditComment.as_view(), name='edit_comment'),
 
