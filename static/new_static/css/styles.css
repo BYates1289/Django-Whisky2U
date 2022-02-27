@@ -602,7 +602,7 @@ active {
 }
 
 #about-home {
-    background-image: url(https://whisky-project-ms4.herokuapp.com/static/new_static/images/bg5.jpg);
+    background-image: url(https://my-wisky.s3.eu-west-2.amazonaws.com/new_static/images/bg5.jpg);
     height: 80vh;
     width: 100%;
     background-size: cover;
