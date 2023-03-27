@@ -14,7 +14,7 @@ import os
 DOMAIN_NAME = "https://whisky-project-ms4.herokuapp.com/"
 
 
-stripe.api_key = os.environ["SECRET_KEY"]
+stripe.api_key = os.getenv("STRIPE_API")
 
 
 # Create your views here.
