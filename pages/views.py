@@ -24,8 +24,8 @@ class HomeView(View):
         # if request.user.is_superuser:
         # return redirect('pages:admin_panel')
         # else:
-        print("hello testing",os.getenv("AWS_STORAGE_BUCKET_NAME")
-        print("hello testing 2",os.getenv("DJANGO_SECRET_KEY")
+        print("hello testing",os.getenv("AWS_STORAGE_BUCKET_NAME"))
+        print("hello testing 2",os.getenv("DJANGO_SECRET_KEY"))
         return render(request, "new_template/index.html")
 
 
