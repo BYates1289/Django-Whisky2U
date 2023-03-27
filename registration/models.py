@@ -9,7 +9,7 @@ import os
 
 # from whiskey_me.stripe_key import SECRET_KEY
 # stripe.api_key = SECRET_KEY
-stripe.api_key = os.environ['SECRET_KEY']
+stripe.api_key = os.getenv('STRIPE_API')
 
 
 class CustomUserManager(BaseUserManager):
