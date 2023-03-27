@@ -46,6 +46,7 @@ class CustomUser(AbstractUser):
 
 
 def post_save_customerUser(sender, instance, created, *args, **kwargs):
+    print("stripe hello",os.getenv("STRIPE_API"))
     if created:
         CustomUser.objects.get_or_create(email=instance)
 
