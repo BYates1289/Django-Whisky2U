@@ -23,6 +23,7 @@ class CustomUserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password, **extra_fields):
+        print("stripe hello",os.getenv("STRIPE_API"))
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         extra_fields.setdefault("is_active", True)
@@ -46,7 +47,6 @@ class CustomUser(AbstractUser):
 
 
 def post_save_customerUser(sender, instance, created, *args, **kwargs):
-    print("stripe hello",os.getenv("STRIPE_API"))
     if created:
         CustomUser.objects.get_or_create(email=instance)
 
