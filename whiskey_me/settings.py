@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['whisky-project-ms4.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['whiskyme.pythonanywhere.com', 'www.whiskyme.pythonanywhere.com']
 
 
 # Application definition
