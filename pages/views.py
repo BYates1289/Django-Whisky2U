@@ -15,7 +15,7 @@ import stripe
 import os
 
 
-stripe.api_key = os.environ["SECRET_KEY"]
+stripe.api_key = os.getenv("STRIPE_API")
 
 
 class HomeView(View):
