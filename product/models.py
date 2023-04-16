@@ -31,8 +31,7 @@ class Product(models.Model):
     type = models.CharField(max_length=100, null=True, blank=True)
     abv = models.FloatField(null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
-    picture = models.ImageField(null=True,
-                                validators=[FileExtensionValidator(['jpg', 'jpeg', 'png'])], blank=True)
+    picture = models.ImageField(validators=[FileExtensionValidator(['jpg', 'jpeg', 'png'])])
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     date_posted = models.DateTimeField(auto_now=True)
@@ -59,7 +58,7 @@ def post_save_product(sender, instance, created, *args, **kwargs):
     if product.product_stripe_id is None or product.product_stripe_id == '':
         print("product->if")
         new_product_stripe_id = stripe.Product.create(
-            name=product.product_name, images=[product.picture, ])
+            name=product.product_name, images=[product.picture.url ])
 
         new_product_price_is_subscribe_id = stripe.Price.create(
             unit_amount=product_price,
