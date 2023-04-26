@@ -1,15 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.base_user import BaseUserManager
 from django.db.models.signals import post_save
 import stripe
-import os
-# from partners.models import Category
-
-# from whiskey_me.stripe_key import SECRET_KEY
-# stripe.api_key = SECRET_KEY
-stripe.api_key = os.getenv("STRIPE_API")
+import os 
+stripe.api_key = os.getenv("STRIPE_API_KEY")
 
 
 class CustomUserManager(BaseUserManager):
@@ -23,7 +19,6 @@ class CustomUserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password, **extra_fields):
-        print("stripe hello",os.getenv("STRIPE_API"))
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         extra_fields.setdefault("is_active", True)

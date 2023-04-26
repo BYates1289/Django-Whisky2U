@@ -50,15 +50,14 @@ class Product(models.Model):
 def post_save_product(sender, instance, created, *args, **kwargs):
     product = Product.objects.get(pk=instance.pk)
     product_name = product.product_name
-    product_price = int(product.price*100)
+    product_price = int(instance.price*100)
     product_price_id = product.product_price_is_subscribe_id
     product_id = product.product_stripe_id
 
     # When new product is created, object of product and price is created.
-    if product.product_stripe_id is None or product.product_stripe_id == '':
-        print("product->if")
+    if created:        
         new_product_stripe_id = stripe.Product.create(
-            name=product.product_name, images=[product.picture.url ])
+            name=instance.product_name, images=[instance.picture.url ])
 
         new_product_price_is_subscribe_id = stripe.Price.create(
             unit_amount=product_price,

@@ -15,17 +15,11 @@ import stripe
 import os
 
 
-stripe.api_key = os.getenv("STRIPE_API")
+stripe.api_key = os.getenv("STRIPE_API_KEY")
 
 
 class HomeView(View):
-
     def get(self, request, *args, **kwargs):
-        # if request.user.is_superuser:
-        # return redirect('pages:admin_panel')
-        # else:
-        print("hello testing",os.getenv("AWS_STORAGE_BUCKET_NAME"))
-        print("hello testing 2",os.getenv("DJANGO_SECRET_KEY"))
         return render(request, "new_template/index.html")
 
 

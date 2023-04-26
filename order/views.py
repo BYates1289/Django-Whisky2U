@@ -11,7 +11,7 @@ from django.utils import timezone
 import stripe
 import os
 
-stripe.api_key = os.getenv("STRIPE_API")
+stripe.api_key =  os.getenv("STRIPE_API_KEY")
 
 
 # Create your views here.
