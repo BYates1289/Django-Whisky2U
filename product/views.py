@@ -38,6 +38,8 @@ class SingleProductView(View):
             if Rating.objects.filter(user=request.user, product=get_product).exists():
                 reviewed = True
         # print(buy)
+        get_related = None
+        get_comment = None
 
         if get_product.category.name == "5cl":
             get_category = Category.objects.filter(name="5cl").first()
