@@ -8,10 +8,9 @@ from registration.models import CustomUser
 from django.contrib.auth.mixins import LoginRequiredMixin
 import stripe
 from django.db.models import Avg
-
 import os
 
-DOMAIN_NAME = "https://whisky-project-ms4.herokuapp.com/"
+DOMAIN_NAME = os.getenv("DEBUG")
 
 
 stripe.api_key = os.getenv("STRIPE_API_KEY")
@@ -113,8 +112,7 @@ class EditComment(LoginRequiredMixin, View):
                 stars=rate,
             )
 
-            product.total_ratings = Rating.objects.filter(
-                product=product).count()
+            product.total_ratings = Rating.objects.filter(product=product).count()
             ratings = Rating.objects.filter(product=product)
             num = int(ratings.aggregate(Avg("stars"))["stars__avg"])
             product.rating_number = num
