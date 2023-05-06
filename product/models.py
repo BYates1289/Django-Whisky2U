@@ -9,16 +9,15 @@ import stripe
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=30, null=False,
-                            blank=False, unique=True)
+    name = models.CharField(max_length=30, null=False, blank=False, unique=True)
 
     def __str__(self):
-        return f'{self.name}'
+        return f"{self.name}"
 
 
 IS_SUBSCRIPTION = (
-    ('yes', 'yes'),
-    ('no', 'no'),
+    ("yes", "yes"),
+    ("no", "no"),
 )
 
 
@@ -31,33 +30,38 @@ class Product(models.Model):
     type = models.CharField(max_length=100, null=True, blank=True)
     abv = models.FloatField(null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
-    picture = models.ImageField(validators=[FileExtensionValidator(['jpg', 'jpeg', 'png'])])
+    picture = models.ImageField(
+        validators=[FileExtensionValidator(["jpg", "jpeg", "png"])]
+    )
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     date_posted = models.DateTimeField(auto_now=True)
     # is_subscription = models.CharField(choices=IS_SUBSCRIPTION, max_length=100)
     product_stripe_id = models.CharField(max_length=100, null=True, blank=True)
     product_price_is_subscribe_id = models.CharField(
-        max_length=100, null=True, blank=True)
+        max_length=100, null=True, blank=True
+    )
     product_price_not_subscribe_id = models.CharField(
-        max_length=100, null=True, blank=True)
+        max_length=100, null=True, blank=True
+    )
 
     def __str__(self):
-        return f'{self.product_name}'
+        return f"{self.product_name}"
 
 
 # run after every product save method call
 def post_save_product(sender, instance, created, *args, **kwargs):
     product = Product.objects.get(pk=instance.pk)
     product_name = product.product_name
-    product_price = int(instance.price*100)
+    product_price = int(instance.price * 100)
     product_price_id = product.product_price_is_subscribe_id
     product_id = product.product_stripe_id
 
     # When new product is created, object of product and price is created.
-    if created:        
+    if created:
         new_product_stripe_id = stripe.Product.create(
-            name=instance.product_name, images=[instance.picture.url ])
+            name=instance.product_name, images=[instance.picture.url]
+        )
 
         new_product_price_is_subscribe_id = stripe.Price.create(
             unit_amount=product_price,
@@ -80,7 +84,6 @@ def post_save_product(sender, instance, created, *args, **kwargs):
 
     # if the product with stripe id is already created, else block run
     else:
-
         print("product->else")
         get_product_object = stripe.Product.retrieve(product_id)
 
@@ -117,16 +120,18 @@ post_save.connect(post_save_product, sender=Product)
 
 
 class Rating(models.Model):
-    user = models.ForeignKey("registration.CustomUser",
-                             on_delete=models.CASCADE, related_name='userraing')
+    user = models.ForeignKey(
+        "registration.CustomUser", on_delete=models.CASCADE, related_name="userraing"
+    )
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     comment = models.CharField(max_length=200, blank=True)
-    stars = models.IntegerField(default=0,
-                                validators=[
-                                    MaxLengthValidator(5),
-                                    MinLengthValidator(0),
-                                ]
-                                )
+    stars = models.IntegerField(
+        default=0,
+        validators=[
+            MaxLengthValidator(5),
+            MinLengthValidator(0),
+        ],
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -134,4 +139,4 @@ class Rating(models.Model):
         verbose_name_plural = _("Ratings")
 
     def __str__(self):
-        return f'{self.user} --> {self.product}'
+        return f"{self.user} --> {self.product}"

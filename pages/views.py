@@ -13,6 +13,7 @@ from django.contrib import messages
 import datetime
 import stripe
 import os
+from pages.models import *
 
 
 stripe.api_key = os.getenv("STRIPE_API_KEY")
@@ -20,7 +21,12 @@ stripe.api_key = os.getenv("STRIPE_API_KEY")
 
 class HomeView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, "new_template/index.html")
+        context = {
+            "monthly_pick": HomeProduct.objects.filter(type="monthly_pick").first(),
+            "most_popular": HomeProduct.objects.filter(type="most_popular").first(),
+            "latest_arrival": HomeProduct.objects.filter(type="latest_arrival").first(),
+        }
+        return render(request, "new_template/index.html", context=context)
 
 
 class NewDashboard(LoginRequiredMixin, View):
@@ -97,7 +103,6 @@ class SingleCategoryView(View):
 
 class AboutView(View):
     def get(self, request, *args, **kwargs):
-
         return render(request, "new_template/about.html")
 
 

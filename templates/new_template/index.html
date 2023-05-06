@@ -166,48 +166,68 @@
     <div class="container-fluid text-center">
         <h1 class="my-5"><b>Discover Great Whiskies.</b></h1>
         <div class="row">
+            {% if monthly_pick %}
             <div class="col-md-4 my-2">
                 <div class="border-radius bg-yellow p-3">
                     <div class="row d-flex justify-content-center">
-                        <h2 class="text-center fw-bold">Our February Pick</h2>
-                        <img src="{% static 'new_static/images/heavens-door.png' %}"
-                            alt="Heaven's Door Double Barrel Whisky" class="our-picks">
+                        <h2 class="text-center fw-bold">
+                            Our Monthly Pick
+                        </h2>
+                        <img src="{{monthly_pick.product.picture.url}}" alt="" class="our-picks">
                     </div>
                     <div class="text-center ">
-                        <h5 class="my-2 home-products"><b><a
-                                    href="https://whisky-project-ms4.herokuapp.com/single_product/14">Heaven's
-                                    Door<br>Double Barrel</b></a></h5>
+                        <h5 class="my-2 home-products">
+                            <b>
+                                <a href="{% url 'product:single_product' 
+                                monthly_pick.product.id  %}">
+                                    {{monthly_pick.product.product_name}}
+                                </a>
+                            </b>
+                        </h5>
                     </div>
                 </div>
             </div>
+            {% endif %}
+            {% if most_popular %}
             <div class="col-md-4 my-2">
                 <div class="border-radius bg-yellow p-3">
                     <div class="row d-flex justify-content-center">
-                        <h2 class="text-center fw-bold">Most Popular</h2>
-                        <img src="{% static 'new_static/images/jameson.png' %}" alt="Jameson Irish Whisky"
-                            class="our-picks">
+                        <h2 class="text-center fw-bold">
+                            Most Popular
+                        </h2>
+                        <img src="{{most_popular.product.picture.url}}" alt="" class="our-picks">
                     </div>
                     <div class="text-center ">
-                        <h5 class="my-2 home-products"><b><a
-                                    href="https://whisky-project-ms4.herokuapp.com/single_product/12">Jameson<br>Irish
-                                    Whisky</b></a></h5>
+                        <h5 class="my-2 home-products"><b><a href="{% url 'product:single_product' 
+                            most_popular.product.id  %}">
+                                    {{most_popular.product.product_name}}
+                            </b>
+                            </a>
+                        </h5>
                     </div>
                 </div>
             </div>
+            {% endif %}
+            {% if latest_arrival %}
             <div class="col-md-4 my-2">
                 <div class="border-radius bg-yellow p-3">
                     <div class="row d-flex justify-content-center">
                         <h2 class="text-center fw-bold">Latest Arrival</h2>
-                        <img src="{% static 'new_static/images/suntory.png' %}" alt="Suntory Whisky Toki"
-                            class="our-picks">
+                        <img src="{{latest_arrival.product.picture.url}}" alt="" class="our-picks">
                     </div>
                     <div class="text-center ">
-                        <h5 class="my-2 home-products"><b><a
-                                    href="https://whisky-project-ms4.herokuapp.com/single_product/13">Suntory<br>Whisky
-                                    Toki</b></a></h5>
+                        <h5 class="my-2 home-products"><b>
+                                <a href="{% url 'product:single_product' 
+                                latest_arrival.product.id  %}">
+                                    {{latest_arrival.product.product_name}}
+                            </b>
+                            </a>
+                        </h5>
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
+    </div>
 </section>
 {% endblock newMain %}
