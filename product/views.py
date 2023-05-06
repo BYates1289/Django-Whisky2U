@@ -10,7 +10,7 @@ import stripe
 from django.db.models import Avg
 import os
 
-DOMAIN_NAME = os.getenv("DEBUG")
+DOMAIN_NAME = os.getenv("DOMAIN_NAME")
 
 
 stripe.api_key = os.getenv("STRIPE_API_KEY")
@@ -37,6 +37,7 @@ class SingleProductView(View):
             if Rating.objects.filter(user=request.user, product=get_product).exists():
                 reviewed = True
         # print(buy)
+
         get_related = None
         get_comment = None
 
