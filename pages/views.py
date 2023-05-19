@@ -407,7 +407,8 @@ class CheckoutMonthlyAddressView(LoginRequiredMixin, View):
 
         address = Address.objects.filter(user=request.user).exists()
         if address:
-            return HttpResponseRedirect(f"/Monthly/{product}/{quantity}")
+            # return HttpResponseRedirect(f"/Monthly/{product}/{quantity}")
+            return redirect("product:monthly", product, quantity)
         else:
             form = CustomerAddressForm()
             context = {
@@ -429,7 +430,6 @@ class CheckoutMonthlyAddressView(LoginRequiredMixin, View):
             new_form = form.save(commit=False)
             new_form.user = request.user
             new_form.save()
-
             return HttpResponseRedirect(f"/Monthly/{product}/{quantity}")
         else:
             context = {
